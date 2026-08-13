@@ -52,21 +52,7 @@ Trained on **3,500 images** at **1024×1024** resolution on a Tesla T4 GPU.
 | Macro-Small Dice (3–8)       | 0.569    |
 | Macro-Average Dice           | 0.702    |
 
-### Per-Class Breakdown
 
-| Class        | Dice Score |
-|--------------|------------|
-| Class 0      | 0.9810     |
-| Class 1      | 0.9688     |
-| Class 2      | 0.9563     |
-| Class 3      | 0.3579     |
-| Class 4      | 0.4020     |
-| Class 5      | 0.3644     |
-| Class 6      | 0.4648     |
-| Class 7      | 0.8393     |
-| Class 8      | 0.9849     |
-
-> **Note:** Small facial features (eyebrows, eyes) remain challenging due to extreme pixel-level class imbalance. These classes represent less than 0.2% of total image pixels, making them inherently difficult for encoder-based architectures that compress spatial resolution through pooling layers.
 
 ## Project Structure
 
@@ -181,15 +167,7 @@ During evaluation and inference, predictions are averaged across:
 
 This produces 6 predictions per image, which are averaged for maximum accuracy.
 
-### Hardware Requirements
 
-| Setup                | Batch Size | Training Time   |
-|----------------------|-----------|-----------------|
-| Tesla T4 (16 GB)     | 2         | ~5 hours        |
-| RTX 4090 (24 GB)     | 4         | ~2 hours (est.) |
-| CPU only             | 1         | Not recommended |
-
-> **Minimum VRAM:** ~12 GB for 1024×1024 resolution with batch size 2.
 
 ## License
 
